@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "context-coverage": {
+      "source": "devclarityai/devclarity-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/training/skills/context-coverage/SKILL.md",
+      "computedHash": "4451ded3cd2a41cd7b2985222486b8544633f6677e6454214b0fccac0e82b62d"
+    },
+    "finding-skill-opportunities": {
+      "source": "devclarityai/devclarity-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/training/skills/finding-skill-opportunities/SKILL.md",
+      "computedHash": "1daa2ff3073c8614b465040b4a43074e0001af68695822fb0607f5fdb5453600"
+    },
+    "skill-eval-builder": {
+      "source": "devclarityai/devclarity-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/training/skills/skill-eval-builder/SKILL.md",
+      "computedHash": "837ea6f13bafcee7fa442599edbb6fcf31a3e201ccefa0273dcb9f8c751aa583"
+    },
+    "skill-improver": {
+      "source": "devclarityai/devclarity-marketplace",
+      "sourceType": "github",
+      "skillPath": "plugins/training/skills/skill-improver/SKILL.md",
+      "computedHash": "b87ff886397f25b1320804df616b5655a01d76e08ba813078a8af12ca191dd90"
+    }
+  }
+}

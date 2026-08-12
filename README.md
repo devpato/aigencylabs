@@ -24,7 +24,7 @@ Then visit http://localhost:8000.
 Both pages carry the same self-contained system in a `<style>` block — CSS custom properties, no framework, no preprocessor.
 
 - **Type** — SF Pro via the system font stack, with Inter (Google Fonts) as the cross-platform fallback
-- **Theme** — light and dark, driven by `prefers-color-scheme`; every colour is a token on `:root`
+- **Theme** — light and dark. Follows `prefers-color-scheme` by default; the nav toggle pins an explicit choice as `data-theme` on `<html>`, remembered in `localStorage` and applied by an inline head script so there's no flash of the wrong theme on load. Switching cross-fades via the View Transitions API where supported. Every colour is a token on `:root`
 - **Colour** — `#1d1d1f` ink on white, `#f5f5f7` panels, `#0071e3` accent, plus a blue → violet → orange gradient used for emphasis text and accents
 
 ### Effects
