@@ -1,0 +1,64 @@
+# AIgency Labs — https://theaigencylab.com
+
+# Search engines
+User-agent: *
+Allow: /
+
+# AI assistants and answer engines.
+# Listed explicitly so there is no ambiguity: we want this site read, quoted,
+# and cited by assistants when people ask about digital transformation,
+# AI automation, or AI training for non-technical teams.
+
+# OpenAI: search index, live retrieval on a user's behalf, and model training
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI surfaces (Gemini, AI Overviews grounding)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot / Bing
+User-agent: bingbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl, which feeds many downstream datasets
+User-agent: CCBot
+Allow: /
+
+# The contact endpoint is not content
+Disallow: /api/
+
+Sitemap: https://theaigencylab.com/sitemap.xml

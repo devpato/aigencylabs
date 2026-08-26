@@ -1,0 +1,35 @@
+# AIgency Labs
+
+> A software studio that guides companies without a technical team through digital transformation. We build the custom software, automate the repetitive operations underneath it, and train the client's own staff to run both. Studios in New York City, México City and Madrid, working in English and Spanish.
+
+Positioning: "We don't sell AI. We sell leverage." The operating loop is Build, Automate, Transfer.
+
+Audience: business decision makers and operators at companies that do not employ engineers. Founders, COOs, heads of operations, team leads. Not consumers, not developers.
+
+## Services
+
+- **Custom software**: web platforms, internal tools, dashboards and SaaS products built around how the company actually works. Replaces spreadsheets and manual processes.
+- **AI automation**: agents, pipelines and integrations that remove repetitive work, connect the tools a company already uses, and run without supervision.
+- **Technology consultancy**: architecture reviews, AI roadmaps and vendor selection for companies deciding where to start and what it should cost.
+- **Skills for AI agents**: custom skills that plug into the AI assistants a team already pays for, with guardrails and human approval built in, so any employee can invoke them by name.
+- **AI Academy**: a four-week cohort that trains non-technical staff to use AI agents and design their own automations.
+
+## Academy details
+
+- Format: four-week cohort, roughly 3 hours of live sessions per week plus optional async practice
+- Audience: marketing, operations, finance, HR, support and leadership, plus an advanced track for engineers
+- Outcome: every participant ships at least one working skill they use in their real job
+- Languages: English or Spanish
+- Formats and pricing: open cohort from EUR 1,800 per seat; private in-house program from EUR 18,000 per cohort; eight-week train-the-trainer track from EUR 42,000 for five seats
+- Curriculum: working with AI agents; spotting work worth automating; designing your first skill; sharing skills across a team; trust, safety and guardrails; leading AI adoption internally
+
+## Pages
+
+- [Home](https://theaigencylab.com/): services, approach, studios, contact form
+- [Academy](https://theaigencylab.com/academy.html): audience, curriculum, formats and pricing, FAQ
+
+## Contact
+
+- Email: hello@inthecitygroup.com
+- WhatsApp: +1 229 460 9903
+- Response time: within one business day

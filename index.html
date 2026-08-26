@@ -5,14 +5,32 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-<title>AIgency Labs — Custom Software · AI Automation · Consultancy</title>
-<meta name="description" content="AIgency Labs designs custom software, automates operations with AI, advises technology teams, and trains companies to build their own AI skills. Offices in the United States, Mexico, and Spain." />
+<title>AIgency Labs · Digital transformation for non-technical teams</title>
+<meta name="description" content="Digital transformation for companies without a tech team: custom software, AI automation, and training your own people can keep. NYC, México City, Madrid." />
+<link rel="canonical" href="https://theaigencylab.com/" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="AIgency Labs" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://theaigencylab.com/" />
+<meta property="og:title" content="AIgency Labs · Digital transformation for companies without a tech team" />
+<meta property="og:description" content="Custom software, AI automation, and training your team can keep. Studios in New York City, México City and Madrid, working in English and Spanish." />
+<meta property="og:image" content="https://theaigencylab.com/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="AIgency Labs: digital transformation for companies without a tech team" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AIgency Labs · Digital transformation for companies without a tech team" />
+<meta name="twitter:description" content="Custom software, AI automation, and training your team can keep. Studios in New York City, México City and Madrid." />
+<meta name="twitter:image" content="https://theaigencylab.com/og.jpg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
 <style>
   /* ============================================================
-     AIgency Labs — design system
+     AIgency Labs design system
      Type: SF Pro (system) with Inter as the cross-platform fallback
      ============================================================ */
   @property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
@@ -48,7 +66,7 @@
     --nav-h:52px;
   }
 
-  /* dark palette — applied by system preference unless light is pinned,
+  /* dark palette, applied by system preference unless light is pinned,
      and by an explicit [data-theme="dark"] choice from the nav toggle */
   @media (prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
@@ -237,8 +255,9 @@
 
   /* ---------- hero ---------- */
   .hero{
-    position:relative;min-height:100svh;display:flex;align-items:center;
-    padding:calc(var(--nav-h) + 84px) 0 90px;overflow:clip;
+    position:relative;min-height:86svh;display:flex;align-items:center;
+    /* bottom padding reserves the scroll cue's lane so centred content can't reach it */
+    padding:calc(var(--nav-h) + 56px) 0 clamp(104px,13vh,132px);overflow:clip;
   }
   .mesh{
     position:absolute;inset:-25% -15%;z-index:0;pointer-events:none;
@@ -258,14 +277,7 @@
     background:linear-gradient(180deg, color-mix(in srgb, var(--bg) 55%, transparent) 0%, transparent 30%, color-mix(in srgb, var(--bg) 92%, transparent) 100%)}
   .hero-inner{position:relative;z-index:2;text-align:center}
 
-  .pill{
-    display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:var(--ink-2);
-    padding:7px 15px 7px 11px;border-radius:999px;border:1px solid var(--line);
-    background:var(--glass-2);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-  }
-  .pill .dot{width:7px;height:7px;border-radius:50%;background:#34c759;box-shadow:0 0 0 4px color-mix(in srgb,#34c759 22%, transparent)}
-
-  .hero h1{margin:26px 0 0}
+  .hero h1{margin:0}
   .hero .sub{max-width:41ch;margin:26px auto 0}
   .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}
 
@@ -291,6 +303,8 @@
   .scroll-cue .rail{width:1px;height:34px;background:linear-gradient(180deg,var(--ink-3),transparent);position:relative;overflow:hidden}
   .scroll-cue .rail::after{content:"";position:absolute;inset:0 auto auto 0;width:1px;height:12px;background:var(--accent);animation:cue 2.2s var(--ease-s) infinite}
   @keyframes cue{0%{transform:translateY(-14px);opacity:0}40%{opacity:1}100%{transform:translateY(34px);opacity:0}}
+  /* on short viewports there is no room for the cue below the hero content */
+  @media (max-height:620px){.scroll-cue{display:none}}
 
   @supports (animation-timeline:scroll()){
     .hero-inner{animation:heroOut linear both;animation-timeline:scroll(root);animation-range:0 78svh}
@@ -301,19 +315,10 @@
   @keyframes meshOut{to{transform:translateY(12%) scale(1.15);opacity:.15}}
   @keyframes cueOut{to{opacity:0}}
 
-  /* ---------- marquee ---------- */
-  .marquee{
-    border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);
-    background:var(--bg-2);overflow:hidden;padding:16px 0;
-    mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
-  }
-  .marquee-track{display:inline-flex;gap:44px;white-space:nowrap;animation:slide 34s linear infinite;will-change:transform}
-  .marquee-track span{display:inline-flex;align-items:center;gap:44px;font-size:14px;font-weight:500;color:var(--ink-3);letter-spacing:.005em}
-  .marquee-track span::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--violet);opacity:.65}
-  @keyframes slide{to{transform:translateX(-50%)}}
-
   /* ---------- generic section ---------- */
   .sec{padding:clamp(88px,11vw,160px) 0;position:relative}
+  /* first section sits closer to the hero so the practice starts near the fold */
+  #work{padding-top:clamp(48px,5vw,80px)}
   .sec-head{max-width:60ch}
   .sec-head .h2{margin-top:18px}
   .sec-head .sub{margin-top:20px;max-width:52ch}
@@ -382,7 +387,7 @@
   .card.feature h3{font-size:clamp(26px,2.6vw,36px);margin-top:22px}
   @media (max-width:900px){.card.feature{grid-template-columns:1fr;gap:26px;padding:30px 24px 34px}}
 
-  /* bento responsive collapse — after .card.feature so these win the cascade */
+  /* bento responsive collapse, placed after .card.feature so these win the cascade */
   @media (max-width:1000px){
     .bento{grid-template-columns:repeat(2,1fr)}
     .bento .c-7,.bento .c-5{grid-column:span 1}
@@ -435,8 +440,7 @@
   }
   .studio:hover{transform:translateY(-4px);box-shadow:var(--shadow-l)}
   .studio .code{font-size:12.5px;font-weight:600;letter-spacing:.1em;color:var(--ink-3)}
-  .studio h4{font-size:29px;letter-spacing:-.03em;margin:16px 0 6px}
-  .studio .sm{font-size:14.5px;color:var(--ink-2)}
+  .studio h3{font-size:29px;letter-spacing:-.03em;margin:16px 0 0}
   @media (max-width:800px){.studios{grid-template-columns:1fr}}
 
   /* ---------- academy teaser ---------- */
@@ -523,7 +527,7 @@
   /* ---------- footer ---------- */
   footer{background:var(--bg-2);border-top:1px solid var(--line-2);padding:56px 0 40px;font-size:13px;color:var(--ink-3)}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-  .foot-grid h6{font-size:12.5px;font-weight:600;color:var(--ink);letter-spacing:-.005em;margin-bottom:14px}
+  .foot-grid h2{font-size:12.5px;font-weight:600;color:var(--ink);letter-spacing:-.005em;margin-bottom:14px}
   .foot-grid ul{list-style:none;display:grid;gap:9px}
   .foot-grid a:hover{color:var(--ink)}
   .foot-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line-2);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
@@ -552,6 +556,73 @@
       if (t === 'dark' || t === 'light') d.setAttribute('data-theme', t);
     } catch (e) {}
   })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://theaigencylab.com/#organization",
+      "name": "AIgency Labs",
+      "legalName": "AIgency Labs S.L.",
+      "url": "https://theaigencylab.com/",
+      "logo": "https://theaigencylab.com/og.jpg",
+      "image": "https://theaigencylab.com/og.jpg",
+      "description": "AIgency Labs guides non-technical companies through digital transformation: custom software, AI automation, custom skills for AI agents, technology consultancy, and an AI academy that trains a client's own team.",
+      "slogan": "We don't sell AI. We sell leverage.",
+      "knowsLanguage": ["en", "es"],
+      "areaServed": [
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "Mexico" },
+        { "@type": "Country", "name": "Spain" }
+      ],
+      "location": [
+        { "@type": "Place", "name": "New York City studio", "address": { "@type": "PostalAddress", "addressLocality": "New York City", "addressCountry": "US" } },
+        { "@type": "Place", "name": "México City studio", "address": { "@type": "PostalAddress", "addressLocality": "México City", "addressCountry": "MX" } },
+        { "@type": "Place", "name": "Madrid studio", "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" } }
+      ],
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+1-229-460-9903",
+        "email": "hello@inthecitygroup.com",
+        "availableLanguage": ["English", "Spanish"]
+      }]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://theaigencylab.com/#website",
+      "url": "https://theaigencylab.com/",
+      "name": "AIgency Labs",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://theaigencylab.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://theaigencylab.com/#webpage",
+      "url": "https://theaigencylab.com/",
+      "name": "AIgency Labs · Digital transformation for companies without a tech team",
+      "description": "Custom software, AI automation, and training your team can keep.",
+      "isPartOf": { "@id": "https://theaigencylab.com/#website" },
+      "about": { "@id": "https://theaigencylab.com/#organization" },
+      "primaryImageOfPage": "https://theaigencylab.com/og.jpg"
+    },
+    {
+      "@type": "OfferCatalog",
+      "name": "AIgency Labs services",
+      "provider": { "@id": "https://theaigencylab.com/#organization" },
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom software", "description": "Web platforms, internal tools and dashboards built around how a company actually works, replacing spreadsheets and manual processes." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI automation", "description": "Agents, pipelines and integrations that remove repetitive work, connect existing tools and run without supervision." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technology consultancy", "description": "Architecture reviews, AI roadmaps and vendor selection for companies deciding where to start and what it should cost." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Skills for AI agents", "description": "Custom skills that plug into the AI agents a team already uses, with guardrails and human approval built in." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Academy", "description": "A four-week cohort that trains non-technical staff to use AI agents and design their own automations." } }
+      ]
+    }
+  ]
+}
 </script>
 </head>
 <body>
@@ -593,8 +664,6 @@
   <div class="hero-veil" aria-hidden="true"></div>
 
   <div class="wrap hero-inner">
-    <span class="pill"><span class="dot"></span> Available for Q4 engagements</span>
-
     <h1 class="display">
       <span class="w" style="--i:0">Software</span> <span class="w" style="--i:1">that</span>
       <span class="w grad-text" style="--i:2">thinks,</span>
@@ -604,7 +673,7 @@
     </h1>
 
     <p class="sub">
-      A small, opinionated studio building custom software, designing AI automations, and training the teams that will eventually outgrow us.
+      Digital transformation for companies without a tech team. We build the software, automate the busywork, and train your people to run it. All of it in plain language.
     </p>
 
     <div class="hero-cta">
@@ -624,19 +693,14 @@
   <div class="scroll-cue" aria-hidden="true"><span class="rail"></span>Scroll</div>
 </header>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>New York City<span></span></span><span>México City</span><span>Madrid</span><span>24h handover cycle</span><span>Build</span><span>Automate</span><span>Transfer</span>
-    <span>New York City</span><span>México City</span><span>Madrid</span><span>24h handover cycle</span><span>Build</span><span>Automate</span><span>Transfer</span>
-  </div>
-</div>
+<main id="main">
 
 <section class="sec" id="work">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal"><span class="num">01</span> Practice</span>
       <h2 class="h2 reveal d1">Five disciplines.<br>One <span class="grad-text">operating system</span>.</h2>
-      <p class="sub reveal d2">Everything we do connects: what we build, we automate — what we automate, we teach.</p>
+      <p class="sub reveal d2">Five ways we move a company from spreadsheets and manual handoffs to systems that run themselves. Everything connects: what we build, we automate; what we automate, we teach.</p>
     </div>
 
     <div class="bento">
@@ -646,8 +710,8 @@
         </div>
         <div class="num">01 · /build</div>
         <h3>Custom software, built around the way you actually work.</h3>
-        <p>Web platforms, internal tools, dashboards, marketplaces and SaaS products — engineered by people who treat code as a craft, not a coupon.</p>
-        <ul class="tags"><li>Full-stack</li><li>TypeScript</li><li>Postgres</li><li>Cloud-native</li><li>Design systems</li></ul>
+        <p>Web platforms, internal tools, dashboards, marketplaces and SaaS products, engineered by people who treat code as a craft, not a coupon.</p>
+        <ul class="tags"><li>Replaces the spreadsheets</li><li>Built around your process</li><li>Works on any device</li><li>Your data stays yours</li><li>Grows with the business</li></ul>
       </article>
 
       <article class="card c-5 reveal d1" data-sheen>
@@ -657,7 +721,7 @@
         <div class="num">02 · /automate</div>
         <h3>AI automation that removes the boring 80%.</h3>
         <p>Agents, pipelines, integrations and ops workflows that quietly do the work nobody wants to do at 2&nbsp;a.m.</p>
-        <ul class="tags"><li>LLM agents</li><li>RAG</li><li>Workflow</li><li>n8n / Temporal</li></ul>
+        <ul class="tags"><li>No more copy and paste</li><li>Connects the tools you use</li><li>Runs while you sleep</li><li>Fewer human errors</li><li>Nothing falls through</li></ul>
       </article>
 
       <article class="card c-5 reveal d2" data-sheen>
@@ -667,7 +731,7 @@
         <div class="num">03 · /advise</div>
         <h3>Tech consultancy without the PowerPoint theatre.</h3>
         <p>Architecture reviews, AI roadmaps, vendor selection, and the hard conversations executives need before they spend the next seven figures.</p>
-        <ul class="tags"><li>Strategy</li><li>Audits</li><li>Roadmaps</li><li>Embedded CTO</li></ul>
+        <ul class="tags"><li>Where to start</li><li>What it should cost</li><li>Which vendors to trust</li><li>A plan you can act on</li><li>Straight answers</li></ul>
       </article>
 
       <a href="academy.html" class="card c-7 reveal d3" data-sheen>
@@ -675,9 +739,9 @@
           <svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M7 10.2V16c0 1.1 2.2 2.5 5 2.5s5-1.4 5-2.5v-5.8"/><path d="M21 8v5.5"/></svg>
         </div>
         <div class="num">04 · /teach</div>
-        <h3>An academy for everyone — technical or not.</h3>
-        <p>We train your team to actually use AI agents and design their own skills — small, reliable tools that quietly take over the repetitive parts of their day. No coding background required.</p>
-        <ul class="tags"><li>Non-technical friendly</li><li>Day-to-day workflows</li><li>Skill design</li><li>Hands-on cohorts</li></ul>
+        <h3>An academy for everyone, technical or not.</h3>
+        <p>We train your team to actually use AI agents and design their own skills: small, reliable tools that quietly take over the repetitive parts of their day. No coding background required.</p>
+        <ul class="tags"><li>No coding required</li><li>Practice on your real work</li><li>Four weeks, start to finish</li><li>English or Spanish</li><li>Your team keeps the knowledge</li></ul>
         <span class="link">Explore the Academy <span class="arw">→</span></span>
       </a>
 
@@ -687,11 +751,11 @@
             <svg viewBox="0 0 24 24"><path d="M10 3h4v3.2a2 2 0 002 2H19v4h-3.2a2 2 0 00-2 2V21h-4v-3.2a2 2 0 00-2-2H5v-4h3.2a2 2 0 002-2V3z"/></svg>
           </div>
           <div class="num" style="margin-top:22px">05 · /skills</div>
-          <h3>Skills for AI agents — built to your exact workflow.</h3>
+          <h3>Skills for AI agents, built to your exact workflow.</h3>
         </div>
         <div>
-          <p>We design and ship custom skills that plug into the AI agents your team already uses — turning chat windows into actual operators. Tools, integrations, and guardrails, packaged so anyone on your team can invoke them by name.</p>
-          <ul class="tags"><li>Custom skills</li><li>Tool-use</li><li>Agent design</li><li>Evals &amp; guardrails</li><li>MCP servers</li></ul>
+          <p>We design and ship custom skills that plug into the AI agents your team already uses, turning chat windows into actual operators. Tools, integrations, and guardrails, packaged so anyone on your team can invoke them by name.</p>
+          <ul class="tags"><li>Works with the AI you already pay for</li><li>Follows your rules</li><li>Anyone can use it by name</li><li>Asks before it acts</li><li>Set up once, used every day</li></ul>
         </div>
       </article>
     </div>
@@ -703,7 +767,7 @@
     <div class="sec-head">
       <span class="eyebrow reveal"><span class="num">02</span> Approach</span>
       <h2 class="h2 reveal d1">We don't sell AI.<br>We sell <span class="grad-text">leverage</span>.</h2>
-      <p class="sub reveal d2">Three modes, running at once. That's the loop — build, automate, transfer. Repeat at scale.</p>
+      <p class="sub reveal d2">Three modes, running at once. That's the loop: build, automate, transfer. Repeat at scale.</p>
     </div>
 
     <div class="stack">
@@ -711,7 +775,7 @@
         <span class="halo" aria-hidden="true"></span>
         <div class="step">Mode one</div>
         <h3>Build</h3>
-        <p>We build custom software where it matters — the systems your business actually runs on, shaped around your real workflows instead of someone else's template.</p>
+        <p>We build custom software where it matters: the systems your business actually runs on, shaped around your real workflows instead of someone else's template.</p>
       </article>
       <article class="panel p-2">
         <span class="halo" aria-hidden="true"></span>
@@ -723,7 +787,7 @@
         <span class="halo" aria-hidden="true"></span>
         <div class="step">Mode three</div>
         <h3>Transfer</h3>
-        <p>And we teach until you no longer need us. The studios that win the next decade won't be the ones with the most models — they'll be the ones whose people can fluently compose them.</p>
+        <p>And we teach until you no longer need us. The studios that win the next decade won't be the ones with the most models. They'll be the ones whose people can fluently compose them.</p>
       </article>
     </div>
   </div>
@@ -732,12 +796,12 @@
 <section class="sec quote-sec">
   <div class="wrap">
     <blockquote class="quote reveal">
-      The interesting question isn't <em class="grad-text">“can AI do this?”</em> — it's whether your team would still recognize the company on the other side. We build the version where they do.
+      The interesting question isn't <em class="grad-text">“can AI do this?”</em> It's whether your team would still recognize the company on the other side. We build the version where they do.
     </blockquote>
 
     <div class="quote-grid">
       <div class="reveal d1">
-        <p>AIgency Labs began with a stubborn idea: the studios that win the next decade won't be the ones with the most models — they'll be the ones whose people can fluently <strong>compose</strong> them.</p>
+        <p>AIgency Labs began with a stubborn idea: the studios that win the next decade won't be the ones with the most models. They'll be the ones whose people can fluently <strong>compose</strong> them.</p>
       </div>
       <div class="reveal d2">
         <p>So we work in three modes at once. We <strong>build</strong> custom software where it matters. We <strong>automate</strong> the operations underneath. And we <strong>teach</strong> until you no longer need us.</p>
@@ -751,25 +815,22 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow reveal"><span class="num">03</span> Studios</span>
-      <h2 class="h2 reveal d1">Three cities.<br>A <span class="grad-text">24-hour</span> handover.</h2>
-      <p class="sub reveal d2">Work moves west with the sun, so momentum never sits in an inbox overnight.</p>
+      <h2 class="h2 reveal d1">Three cities.<br>Two <span class="grad-text">languages</span>.<br>One team.</h2>
+      <p class="sub reveal d2">You work with people in your time zone, in English or Spanish, who explain things without the jargon. No offshore handoffs, no account manager in the middle.</p>
     </div>
 
     <div class="studios">
       <div class="studio reveal">
         <div class="code">USA</div>
-        <h4>New York City</h4>
-        <div class="sm">Product engineering · Consultancy</div>
+        <h3>New York City</h3>
       </div>
       <div class="studio reveal d1">
         <div class="code">MX</div>
-        <h4>México City</h4>
-        <div class="sm">Automation · Delivery</div>
+        <h3>México City</h3>
       </div>
       <div class="studio reveal d2">
         <div class="code">ES</div>
-        <h4>Madrid</h4>
-        <div class="sm">Academy · Skills design</div>
+        <h3>Madrid</h3>
       </div>
     </div>
   </div>
@@ -781,7 +842,7 @@
       <div class="promo-in">
         <span class="eyebrow">AI Academy</span>
         <h2>Make your team genuinely AI-fluent.</h2>
-        <p>Six weeks, one shipped skill per person. The Academy is where non-technical teams — marketing, ops, finance, HR, support, leadership — stop experimenting with AI and start depending on it.</p>
+        <p>Four weeks, one shipped skill per person. The Academy is where non-technical teams (marketing, ops, finance, HR, support, leadership) stop experimenting with AI and start depending on it.</p>
         <a href="academy.html" class="btn btn-primary">Explore the Academy <span class="arw">→</span></a>
       </div>
     </div>
@@ -798,12 +859,9 @@
     </p>
 
     <form id="contactForm" class="form reveal d3"
-          action="https://formsubmit.co/ajax/hello@inthecitygroup.com"
+          action="/api/contact"
           method="POST" novalidate>
-      <input type="hidden" name="_subject" value="New inquiry — AIgency Labs">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
       <div class="form-row">
         <div class="field">
@@ -853,12 +911,12 @@
     <div class="channels reveal d3">
       <a href="mailto:hello@inthecitygroup.com">hello@inthecitygroup.com</a>
       <a href="#">Calendly · 30-min intake</a>
-      <span>+1 (212) 000 — 0142</span>
-      <span>+52 (55) 0000 — 0142</span>
-      <span>+34 91 000 — 0142</span>
+      <a href="https://wa.me/12294609903" target="_blank" rel="noopener noreferrer">WhatsApp · +1 (229) 460-9903</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -868,7 +926,7 @@
         <p class="foot-note" style="margin-top:14px">Custom software, AI automation, and the training that makes both stick. New York · México · Madrid.</p>
       </div>
       <div>
-        <h6>Practice</h6>
+        <h2>Practice</h2>
         <ul>
           <li><a href="#work">Custom Software</a></li>
           <li><a href="#work">AI Automation</a></li>
@@ -878,7 +936,7 @@
         </ul>
       </div>
       <div>
-        <h6>Company</h6>
+        <h2>Company</h2>
         <ul>
           <li><a href="#approach">Approach</a></li>
           <li><a href="#studios">Studios</a></li>
@@ -920,7 +978,7 @@
     };
     if (document.startViewTransition && !reduced) {
       const vt = document.startViewTransition(apply);
-      /* a transition interrupted by a fast second click rejects — the DOM change still lands */
+      /* a transition interrupted by a fast second click rejects, but the DOM change still lands */
       vt.ready.catch(() => {});
       vt.finished.catch(() => {});
     } else apply();
@@ -967,17 +1025,17 @@
     });
   }
 
-  /* contact form (FormSubmit AJAX) */
+  /* contact form, posts JSON to the /api/contact serverless function */
   const form = document.getElementById('contactForm');
   const msg = document.getElementById('formMsg');
   const btn = document.getElementById('submitBtn');
+  const resetBtn = () => { btn.disabled = false; btn.innerHTML = 'Send message <span class="arw">→</span>'; };
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       msg.classList.remove('show','ok','err');
       if (form.querySelector('input[name="_honey"]').value) return;
-      const required = form.querySelectorAll('[required]');
-      for (const f of required) {
+      for (const f of form.querySelectorAll('[required]')) {
         if (!f.value.trim()) {
           msg.textContent = 'Please fill in all required fields.';
           msg.classList.add('show','err');
@@ -988,27 +1046,25 @@
       btn.disabled = true;
       btn.textContent = 'Sending…';
       try {
-        const data = new FormData(form);
+        const payload = Object.fromEntries(new FormData(form).entries());
         const res = await fetch(form.action, {
           method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
         });
         const json = await res.json().catch(() => ({}));
-        if (res.ok && (json.success === 'true' || json.success === true)) {
-          msg.textContent = '✓ Message received. We\'ll be in touch within one business day.';
-          msg.classList.add('show','ok');
-          form.reset();
-          btn.textContent = 'Sent ✓';
-          setTimeout(() => { btn.disabled = false; btn.innerHTML = 'Send message <span class="arw">→</span>'; }, 4000);
-        } else {
-          throw new Error(json.message || 'Submission failed');
-        }
+        if (!res.ok || !json.ok) throw new Error(json.error || 'Submission failed');
+        msg.textContent = '✓ Message received. We\'ll be in touch within one business day.';
+        msg.classList.add('show','ok');
+        form.reset();
+        btn.textContent = 'Sent ✓';
+        setTimeout(resetBtn, 4000);
       } catch (err) {
-        msg.textContent = 'Something went wrong — please email hello@inthecitygroup.com directly.';
+        msg.textContent = err.message && err.message !== 'Submission failed'
+          ? err.message
+          : 'Something went wrong. Please message us on WhatsApp or email us directly.';
         msg.classList.add('show','err');
-        btn.disabled = false;
-        btn.innerHTML = 'Send message <span class="arw">→</span>';
+        resetBtn();
       }
     });
   }
