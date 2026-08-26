@@ -20,7 +20,7 @@ Audience: business decision makers and operators at companies that do not employ
 - Audience: marketing, operations, finance, HR, support and leadership, plus an advanced track for engineers
 - Outcome: every participant ships at least one working skill they use in their real job
 - Languages: English or Spanish
-- Formats and pricing: open cohort from EUR 1,800 per seat; private in-house program from EUR 18,000 per cohort; eight-week train-the-trainer track from EUR 42,000 for five seats
+- Formats and pricing: open cohort USD 400 per seat; private in-house program from USD 4,000 per cohort; eight-week train-the-trainer track from USD 10,000 for five seats
 - Curriculum: working with AI agents; spotting work worth automating; designing your first skill; sharing skills across a team; trust, safety and guardrails; leading AI adoption internally
 
 ## Pages
