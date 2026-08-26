@@ -16,7 +16,7 @@ Audience: business decision makers and operators at companies that do not employ
 
 ## Academy details
 
-- Format: four-week cohort, roughly 3 hours of live sessions per week plus optional async practice
+- Format: four-week cohort, roughly 1 to 2 hours of live sessions per week plus optional async practice
 - Audience: marketing, operations, finance, HR, support and leadership, plus an advanced track for engineers
 - Outcome: every participant ships at least one working skill they use in their real job
 - Languages: English or Spanish
