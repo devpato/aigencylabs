@@ -6,7 +6,7 @@
  *
  * Required environment variables (set them in Vercel, Settings > Environment Variables):
  *   RESEND_API_KEY  API key from the Resend dashboard
- *   CONTACT_TO      Where submissions are delivered, e.g. hello@theaigencylab.com
+ *   CONTACT_TO      Where submissions are delivered, e.g. contact@theaigencylab.com
  *
  * Optional:
  *   CONTACT_FROM    Sender address on a domain verified in Resend.
