@@ -1,6 +1,6 @@
 # AIgency Labs
 
-> A software studio that guides companies without a technical team through digital transformation. We build the custom software, automate the repetitive operations underneath it, and train the client's own staff to run both. Studios in New York City, México City and Madrid, working in English and Spanish.
+> A software studio that guides companies through digital transformation in the AI era, especially those without a technical team of their own. We build the custom software, automate the repetitive operations underneath it, and train the client's own staff to run both. Studios in New York City, México City and Madrid, working in English and Spanish.
 
 Positioning: "We don't sell AI. We sell leverage." The operating loop is Build, Automate, Transfer.
 
